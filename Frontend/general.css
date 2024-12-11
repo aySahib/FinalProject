@@ -1,6 +1,10 @@
 body {
   padding-top: 80px;
-  padding-left: 80px;
+  padding-left: 96px;
+  height: 1000px;
+  padding-right: 24px;
+  background-color: rgb(250, 250, 250);
+
 }
 
 p {
@@ -40,4 +44,20 @@ p {
 
 body {
   margin: 0;
+}
+
+.vtime {
+  font-family: Robot, Arial;
+  font-size: 12px;
+  font-weight: 500;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 2px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 25px;
+  right: 5px;
 }

@@ -1,4 +1,5 @@
 .header {
+  background-color: white;
   height: 55px;
   display: flex;
   flex-direction: row;
@@ -10,6 +11,7 @@
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: rgb(233, 233, 233);
+  z-index: 100;
 }
 
 .left {
@@ -28,7 +30,6 @@
 
 .searchicon {
   height: 25px;
-  margin-top: 4px;
 }
 
 .search {
@@ -50,13 +51,45 @@
 }
 
 .searchb {
-  height: 39px;
+  height: 40px;
   width: 66px;
   background-color: rgb(240, 240, 240);
   border-width: 1px;
   border-style: solid;
   border-color: rgb(192, 192, 192);
   margin-left: -1px;
+  margin-top: 1px;
+  position: relative;
+}
+
+.searchb, .voiceb , .uploadcon , .appscon , .notibox {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  cursor: pointer;
+}
+
+.searchb .tip , .voiceb .tip , .uploadcon .tip , .appscon .tip, .notibox .tip {
+  font-family: Roboto, Arial;
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.searchb:hover .tip, .voiceb:hover .tip , .uploadcon:hover .tip , .appscon:hover .tip , .notibox:hover .tip {
+  opacity: 1;
 }
 
 .voiceb {
@@ -66,21 +99,23 @@
   border: none;
   border-radius: 20px;
   margin-left: 10px;
+  position: relative;
 }
 
 .voiceicon {
   height: 24px;
-  margin-top: 4px;
 }
 
 .menu {
   height: 25px;
   margin-left: 24px;
   margin-right: 24px;
+  cursor: pointer;
 }
 
 .yt {
   height: 20px;
+  cursor: pointer;
 }
 
 .right {
@@ -93,18 +128,37 @@
 }
 
 .uploadicon {
-  height: 30px;
+  height: 24px;
 }
 
 .appsicon {
-  height: 30px;
+  height: 24px;
 }
 
 .notisicon {
-  height: 30px;
+  height: 24px;
 }
 
 .accicon {
-  height: 30px;
+  height: 32px;
   border-radius: 20px;
+}
+
+.notibox {
+  position: relative;
+}
+
+.noticount {
+  position: absolute;
+  top: 1px;
+  right: -1px;
+  background-color: rgb(200, 0, 0);
+  color: white;
+  font-family: Robot, Arial;
+  font-size: 11px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 10px;
 }
